@@ -7,10 +7,8 @@ export class IfnotDirective {
 
   @Input('appIfnot') set ifNot(condition: boolean) {
     if (!condition) {
-      // Показать элементы
       this.viewContainer.createEmbeddedView(this.templateRef)
     } else {
-      // Скрыть
       this.viewContainer.clear()
     }
   }
